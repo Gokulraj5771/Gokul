@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Little Love Story ✨</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Library for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Custom Font Assignments */
+        .font-serif-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .font-sans-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-handwritten {
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #fdf2f8;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #fbcfe8;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f9a8d4;
+        }
+
+        /* Heart Cursor */
+        body {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>❤️</text></svg>") 16 0, auto;
+        }
+
+        /* Floating Hearts Background Animation */
+        .heart-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .floating-heart {
+            position: absolute;
+            bottom: -20px;
+            animation: floatUp 15s linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-100vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#FCE7F3', // soft blush pink
+                            DEFAULT: '#EC4899', // accent rose pink
+                            dark: '#9d174d', // deep rose text
+                            secondary: '#E9D5FF', // lavender
+                            highlight: '#FBBF24', // soft gold
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-brand-light text-brand-dark font-sans-body antialiased overflow-x-hidden transition-colors duration-500 selection:bg-pink-200 selection:text-pink-900">
+
+    <!-- Floating Background Hearts -->
+    <div class="heart-bg" id="heart-bg"></div>
+
+    <!-- 1️⃣ HERO SECTION -->
+    <section class="min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 relative">
+        <div data-aos="fade-down" data-aos-duration="1500" class="mb-6">
+            <span class="text-6xl md:text-7xl animate-pulse">✨</span>
+        </div>
+        <h1 data-aos="zoom-in" data-aos-duration="1500"
+            class="font-serif-heading text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600 drop-shadow-sm">
+            Our Little Love Story
+        </h1>
+        <p data-aos="fade-up" data-aos-delay="500"
+            class="font-handwritten text-2xl md:text-4xl text-gray-600 max-w-2xl mt-4 leading-relaxed">
+            "Every love story is beautiful, but ours is my favorite."
+        </p>
+
+        <div class="absolute bottom-10 animate-bounce cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-pink-500" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- 2️⃣ TIMELINE SECTION -->
+    <section class="py-20 px-4 md:px-0 max-w-5xl mx-auto">
+        <h2 data-aos="fade-up" class="text-4xl md:text-5xl font-serif-heading text-center mb-16 text-pink-600">
+            How It All Began...
+        </h2>
+
+        <div class="relative">
+            <!-- Central Line -->
+            <div class="absolute left-4 md:left-1/2 min-h-full w-0.5 bg-pink-300 transform -translate-x-1/2"></div>
+
+            <!-- Timeline Item 1 (Left) -->
+            <div class="relative flex flex-col md:flex-row items-center mb-16">
+                <!-- Dot -->
+                <div
+                    class="absolute left-4 md:left-1/2 w-6 h-6 bg-pink-500 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10">
+                </div>
+
+                <!-- Content Left -->
+                <div class="w-full md:w-1/2 md:pr-12 pl-12 md:pl-0 md:text-right" data-aos="fade-right">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-md border border-pink-100 hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2070&auto=format&fit=crop"
+                            alt="Meeting"
+                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Dec
+                            15, 2023</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">The Day We Met</h3>
+                        <p class="text-gray-600">I never believed in love at first sight until I saw you smiling from
+                            across the room. The world just stopped.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2"></div> <!-- Spacer -->
+            </div>
+
+            <!-- Timeline Item 2 (Right) -->
+            <div class="relative flex flex-col md:flex-row items-center mb-16">
+                <!-- Dot -->
+                <div
+                    class="absolute left-4 md:left-1/2 w-6 h-6 bg-purple-500 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10">
+                </div>
+
+                <div class="w-full md:w-1/2"></div> <!-- Spacer -->
+
+                <!-- Content Right -->
+                <div class="w-full md:w-1/2 md:pl-12 pl-12 md:pl-0" data-aos="fade-left">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-md border border-purple-100 hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1974&auto=format&fit=crop"
+                            alt="First Date"
+                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-2">Jan
+                            10, 2024</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Our First Date</h3>
+                        <p class="text-gray-600">Coffee turned into dinner, dinner turned into late-night walks. I
+                            didn't want the night to end.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3 (Left) -->
+            <div class="relative flex flex-col md:flex-row items-center mb-16">
+                <!-- Dot -->
+                <div
+                    class="absolute left-4 md:left-1/2 w-6 h-6 bg-pink-500 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10">
+                </div>
+
+                <!-- Content Left -->
+                <div class="w-full md:w-1/2 md:pr-12 pl-12 md:pl-0 md:text-right" data-aos="fade-right">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-md border border-pink-100 hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=1974&auto=format&fit=crop"
+                            alt="First Trip"
+                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Mar
+                            20, 2024</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Our First Adventure</h3>
+                        <p class="text-gray-600">Driving with no destination, singing bad songs, and realizing you're my
+                            favorite travel companion.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2"></div> <!-- Spacer -->
+            </div>
+
+            <!-- Timeline Item 4 (Right) -->
+            <div class="relative flex flex-col md:flex-row items-center mb-16">
+                <!-- Dot -->
+                <div
+                    class="absolute left-4 md:left-1/2 w-6 h-6 bg-yellow-500 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10">
+                </div>
+
+                <div class="w-full md:w-1/2"></div> <!-- Spacer -->
+
+                <!-- Content Right -->
+                <div class="w-full md:w-1/2 md:pl-12 pl-12 md:pl-0" data-aos="fade-left">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-md border border-yellow-100 hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2069&auto=format&fit=crop"
+                            alt="First Anniversary"
+                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm font-semibold mb-2">Dec
+                            15, 2024</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">One Year Together</h3>
+                        <p class="text-gray-600">365 days of us. It's been the best year of my life, and I wouldn't
+                            trade a single moment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 5 (Left) -->
+            <div class="relative flex flex-col md:flex-row items-center mb-16">
+                <!-- Dot -->
+                <div
+                    class="absolute left-4 md:left-1/2 w-6 h-6 bg-pink-500 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10">
+                </div>
+
+                <!-- Content Left -->
+                <div class="w-full md:w-1/2 md:pr-12 pl-12 md:pl-0 md:text-right" data-aos="fade-right">
+                    <div
+                        class="bg-white p-6 rounded-2xl shadow-md border border-pink-100 hover:shadow-xl transition-shadow duration-300">
+                        <img src="https://images.unsplash.com/photo-1516058020253-21475ecc90ba?q=80&w=2070&auto=format&fit=crop"
+                            alt="The Present"
+                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <span
+                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Today</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Right Now</h3>
+                        <p class="text-gray-600">Making this for you, thinking about how lucky I am. You are my
+                            everything.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2"></div> <!-- Spacer -->
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <button
+                class="px-6 py-2 bg-pink-100 hover:bg-pink-200 text-pink-600 rounded-full transition-colors duration-300 font-medium text-sm">
+                + Add more memories here
+            </button>
+        </div>
+    </section>
+
+    <!-- 3️⃣ PHOTO MEMORIES SECTION (Scrapbook) -->
+    <section class="py-20 bg-gradient-to-b from-transparent to-white/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 data-aos="zoom-in" class="text-4xl md:text-5xl font-serif-heading text-center mb-16 text-purple-700">
+                Snapshots of Us 📸
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                <!-- Photo 1 -->
+                <div data-aos="flip-left"
+                    class="group relative transform rotate-2 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer">
+                    <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
+                        <img src="https://images.unsplash.com/photo-1511285560982-1351cdeb9821?q=80&w=1974&auto=format&fit=crop"
+                            alt="Us"
+                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="absolute bottom-4 left-0 w-full text-center">
+                            <p
+                                class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                Just being silly 🤪</p>
+                        </div>
+                    </div>
+                    <!-- Tape Effect -->
+                    <div
+                        class="absolute -top-3 left-1/2 w-24 h-8 bg-yellow-100/80 transform -translate-x-1/2 -rotate-2 shadow-sm">
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div data-aos="flip-up" data-aos-delay="200"
+                    class="group relative transform -rotate-3 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer md:mt-12">
+                    <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
+                        <img src="https://images.unsplash.com/photo-1621112904887-419379ce6824?q=80&w=2072&auto=format&fit=crop"
+                            alt="Us"
+                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="absolute bottom-4 left-0 w-full text-center">
+                            <p
+                                class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                My favorite view ❤️</p>
+                        </div>
+                    </div>
+                    <!-- Tape Effect -->
+                    <div
+                        class="absolute -top-3 left-1/2 w-24 h-8 bg-pink-100/80 transform -translate-x-1/2 rotate-1 shadow-sm">
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div data-aos="flip-right" data-aos-delay="400"
+                    class="group relative transform rotate-1 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer">
+                    <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
+                        <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?q=80&w=1974&auto=format&fit=crop"
+                            alt="Us"
+                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="absolute bottom-4 left-0 w-full text-center">
+                            <p
+                                class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                Best day ever ✨</p>
+                        </div>
+                    </div>
+                    <!-- Tape Effect -->
+                    <div
+                        class="absolute -top-3 left-1/2 w-24 h-8 bg-purple-100/80 transform -translate-x-1/2 -rotate-3 shadow-sm">
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div data-aos="flip-left" data-aos-delay="100"
+                    class="group relative transform -rotate-2 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer md:col-span-1 md:col-start-1 md:mt-8">
+                    <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
+                        <img src="https://images.unsplash.com/photo-1522263842439-347f0d7b9d52?q=80&w=1974&auto=format&fit=crop"
+                            alt="Us"
+                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="absolute bottom-4 left-0 w-full text-center">
+                            <p
+                                class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                Adventures await 🌍</p>
+                        </div>
+                    </div>
+                    <!-- Tape Effect -->
+                    <div
+                        class="absolute -top-3 left-1/2 w-24 h-8 bg-blue-100/80 transform -translate-x-1/2 rotate-2 shadow-sm">
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div data-aos="flip-up" data-aos-delay="300"
+                    class="group relative transform rotate-3 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer md:col-span-1 md:col-start-3 md:mt-8 hidden md:block">
+                    <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1974&auto=format&fit=crop"
+                            alt="Us"
+                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="absolute bottom-4 left-0 w-full text-center">
+                            <p
+                                class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                                Forever & always 💍</p>
+                        </div>
+                    </div>
+                    <!-- Tape Effect -->
+                    <div
+                        class="absolute -top-3 left-1/2 w-24 h-8 bg-pink-200/80 transform -translate-x-1/2 -rotate-1 shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ LOVE MESSAGES SECTION -->
+    <section class="py-20 max-w-4xl mx-auto px-4">
+        <h2 data-aos="fade-up" class="text-4xl md:text-5xl font-serif-heading text-center mb-16 text-pink-600">
+            Notes to You 💌
+        </h2>
+
+        <div class="space-y-8">
+            <!-- Note 1 -->
+            <div data-aos="fade-up"
+                class="bg-white p-6 rounded-t-3xl rounded-br-3xl rounded-bl-sm shadow-md border-l-4 border-pink-400 max-w-lg mr-auto relative transform transition hover:-translate-y-1">
+                <p class="text-lg text-gray-700 italic">"I love you more than words can say. You are my sunshine on a
+                    cloudy day."</p>
+                <div class="absolute -bottom-6 left-0 text-4xl text-pink-200">❞</div>
+            </div>
+
+            <!-- Note 2 -->
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="bg-purple-50 p-6 rounded-t-3xl rounded-bl-3xl rounded-br-sm shadow-md border-r-4 border-purple-400 max-w-lg ml-auto relative transform transition hover:-translate-y-1">
+                <p class="text-lg text-gray-700 italic">"Thank you for being my rock, my safe place, and my biggest
+                    cheerleader. Life is just better with you."</p>
+                <div class="absolute -bottom-6 right-0 text-4xl text-purple-200 transform scale-x-[-1]">❞</div>
+            </div>
+
+            <!-- Note 3 -->
+            <div data-aos="fade-up" data-aos-delay="400"
+                class="bg-white p-6 rounded-t-3xl rounded-br-3xl rounded-bl-sm shadow-md border-l-4 border-yellow-400 max-w-lg mr-auto relative transform transition hover:-translate-y-1">
+                <p class="text-lg text-gray-700 italic">"Can't wait to make a million more memories with you. You're
+                    stuck with me now! 😉"</p>
+                <div class="absolute -bottom-6 left-0 text-4xl text-yellow-200">❞</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ FINAL EMOTIONAL SECTION -->
+    <section class="min-h-[60vh] flex flex-col items-center justify-center text-center px-4 mb-20">
+        <div data-aos="zoom-in" data-aos-duration="1500" class="mb-8">
+            <h2
+                class="font-serif-heading text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-600 to-purple-600 mb-6">
+                And this is just the beginning... ❤️
+            </h2>
+            <p class="text-xl text-gray-500 font-sans-body">I love you, forever and always.</p>
+        </div>|
+
+        <a href="love-letter.html"
+            class="group relative inline-flex items-center justify-center overflow-hidden rounded-full bg-white px-8 py-4 font-bold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-pink-400/40 ring-1 ring-pink-100">
+            <!-- Sliding Background -->
+            <span
+                class="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-500 to-rose-500 transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></span>
+
+            <!-- Text Content -->
+            <span
+                class="relative flex items-center gap-2 text-pink-600 transition-colors duration-300 group-hover:text-white">
+                <span>One Last Surprise 💌</span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+            </span>
+        </a>
+    </section>
+
+    <footer class="text-center py-8 text-pink-300 text-sm opacity-60">
+        <p>Made with all the love in the world for you.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="our-story.js"></script>
+</body>
+
+</html>
