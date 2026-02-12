@@ -15,6 +15,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+    <!-- Ant Design CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/5.12.2/reset.min.css">
+    <!-- React and Ant Design JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.10/dayjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/antd/5.12.2/antd.min.js"></script>
 
     <style>
         /* Custom Font Assignments */
@@ -156,15 +163,21 @@
                 <div class="w-full md:w-1/2 md:pr-12 pl-12 md:pl-0 md:text-right" data-aos="fade-right">
                     <div
                         class="bg-white p-6 rounded-2xl shadow-md border border-pink-100 hover:shadow-xl transition-shadow duration-300">
-                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2070&auto=format&fit=crop"
-                            alt="Meeting"
-                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <div class="antd-img-container mb-4"
+                            data-src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=2070&auto=format&fit=crop"
+                            data-alt="Meeting"
+                            data-class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-500">
+                        </div>
                         <span
                             class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Dec
                             15, 2023</span>
-                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">The Day We Met</h3>
-                        <p class="text-gray-600">I never believed in love at first sight until I saw you smiling from
-                            across the room. The world just stopped.</p>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">The day I saw you</h3>
+                        <p class="text-gray-600">I didn’t even know what love really was.
+                            But somehow, I had already fallen for you—
+                            for the way you were shouting at your mom, saying you were late for school,
+                            with one side of your hair done and the other still messy.
+                            In that simple, imperfect moment…
+                            my world just stopped.</p>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2"></div> <!-- Spacer -->
@@ -183,15 +196,20 @@
                 <div class="w-full md:w-1/2 md:pl-12 pl-12 md:pl-0" data-aos="fade-left">
                     <div
                         class="bg-white p-6 rounded-2xl shadow-md border border-purple-100 hover:shadow-xl transition-shadow duration-300">
-                        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1974&auto=format&fit=crop"
-                            alt="First Date"
-                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <div class="antd-img-container mb-4"
+                            data-src="https://ik.imagekit.io/c2zxrxqp6/Gokul/card2.jpeg" data-alt="First Date"
+                            data-class="w-full h-48 object-contain rounded-xl hover:scale-105 transition-transform duration-500">
+                        </div>
                         <span
                             class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-2">Jan
                             10, 2024</span>
                         <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Our First Date</h3>
-                        <p class="text-gray-600">Coffee turned into dinner, dinner turned into late-night walks. I
-                            didn't want the night to end.</p>
+                        <p class="text-gray-600">The first words I ever spoke to you directly without fear
+                            were me showing my hand, forming a tiny heart,
+                            and asking you what it meant—
+                            because you loved K-dramas.
+                            You smiled and said, " salanghaeyo ,” I think…
+                            saying it so freely, without any fear.</p>
                     </div>
                 </div>
             </div>
@@ -207,15 +225,24 @@
                 <div class="w-full md:w-1/2 md:pr-12 pl-12 md:pl-0 md:text-right" data-aos="fade-right">
                     <div
                         class="bg-white p-6 rounded-2xl shadow-md border border-pink-100 hover:shadow-xl transition-shadow duration-300">
-                        <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?q=80&w=1974&auto=format&fit=crop"
-                            alt="First Trip"
-                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <div class="antd-img-container mb-4"
+                            data-src="https://ik.imagekit.io/c2zxrxqp6/Gokul/PHOTO-2026-02-11-10-35-49.jpg"
+                            data-alt="First Trip"
+                            data-class="w-full h-48 object-contain rounded-xl hover:scale-105 transition-transform duration-500">
+                        </div>
                         <span
                             class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Mar
                             20, 2024</span>
                         <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Our First Adventure</h3>
-                        <p class="text-gray-600">Driving with no destination, singing bad songs, and realizing you're my
-                            favorite travel companion.</p>
+                        <p class="text-gray-600">The first time you wished me
+                            was on my birthday in 2020, through Shella.
+                            That single wish turned into one of the best birthdays of my life.
+                            I remember how happy I was that day—
+                            a happiness I can still feel when I think about it.
+                            Even when Shella teased you and made fun of you,
+                            you still took that step and wished me.
+                            That small act meant more to me than you’ll ever know,
+                            and it became one of my most cherished moments with you</p>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2"></div> <!-- Spacer -->
@@ -234,15 +261,21 @@
                 <div class="w-full md:w-1/2 md:pl-12 pl-12 md:pl-0" data-aos="fade-left">
                     <div
                         class="bg-white p-6 rounded-2xl shadow-md border border-yellow-100 hover:shadow-xl transition-shadow duration-300">
-                        <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2069&auto=format&fit=crop"
-                            alt="First Anniversary"
-                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <div class="antd-img-container mb-4"
+                            data-src="https://ik.imagekit.io/c2zxrxqp6/Gokul/image.png?updatedAt=1770817881097"
+                            data-alt="First Anniversary"
+                            data-class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-500">
+                        </div>
                         <span
                             class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm font-semibold mb-2">Dec
                             15, 2024</span>
                         <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">One Year Together</h3>
-                        <p class="text-gray-600">365 days of us. It's been the best year of my life, and I wouldn't
-                            trade a single moment.</p>
+                        <p class="text-gray-600">was just a chocolate, but it meant everything to me.
+                            As you already know, I still have the wrapper from that chocolate—
+                            I kept it like a little piece of us.
+                            And the bracelet I gave you…
+                            every time I see it hanging on your wrist,
+                            it feels like I’m holding your hand, even from a distance</p>
                     </div>
                 </div>
             </div>
@@ -258,25 +291,32 @@
                 <div class="w-full md:w-1/2 md:pr-12 pl-12 md:pl-0 md:text-right" data-aos="fade-right">
                     <div
                         class="bg-white p-6 rounded-2xl shadow-md border border-pink-100 hover:shadow-xl transition-shadow duration-300">
-                        <img src="https://images.unsplash.com/photo-1516058020253-21475ecc90ba?q=80&w=2070&auto=format&fit=crop"
-                            alt="The Present"
-                            class="w-full h-48 object-cover rounded-xl mb-4 hover:scale-105 transition-transform duration-500">
+                        <div class="antd-img-container mb-4"
+                            data-src="https://ik.imagekit.io/c2zxrxqp6/Gokul/image.png?updatedAt=1770818279004"
+                            data-alt="The Present"
+                            data-class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-500">
+                        </div>
                         <span
                             class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Today</span>
                         <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Right Now</h3>
-                        <p class="text-gray-600">Making this for you, thinking about how lucky I am. You are my
-                            everything.</p>
+                        <p class="text-gray-600">The first photo and video you ever sent me
+                            That picture was taken by your sister, just casually for Snapchat.
+                            For them, it was only a photo…
+                            but for me, it was everything.
+                            I watched it all night without sleeping,
+                            as if the whole world had paused inside that moment.
+                            You asked me to delete those pictures—
+                            I said I did… but I’m sorry for that little lie,
+                            because I just couldn’t let them go.
+                            And then, after almost two years,
+                            you sent me a video—
+                            a flying kiss meant just for me.
+                            In that single second,
+                            you pulled me straight into heaven.</p>
                     </div>
                 </div>
                 <div class="w-full md:w-1/2"></div> <!-- Spacer -->
             </div>
-        </div>
-
-        <div class="text-center mt-8">
-            <button
-                class="px-6 py-2 bg-pink-100 hover:bg-pink-200 text-pink-600 rounded-full transition-colors duration-300 font-medium text-sm">
-                + Add more memories here
-            </button>
         </div>
     </section>
 
@@ -284,7 +324,7 @@
     <section class="py-20 bg-gradient-to-b from-transparent to-white/50">
         <div class="max-w-6xl mx-auto px-4">
             <h2 data-aos="zoom-in" class="text-4xl md:text-5xl font-serif-heading text-center mb-16 text-purple-700">
-                Snapshots of Us 📸
+                Glimpes of grace
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
@@ -292,9 +332,9 @@
                 <div data-aos="flip-left"
                     class="group relative transform rotate-2 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer">
                     <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1511285560982-1351cdeb9821?q=80&w=1974&auto=format&fit=crop"
-                            alt="Us"
-                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="antd-img-container" data-src="ezgif-6016aa27f009ad4d.gif" data-alt="Us"
+                            data-class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        </div>
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -311,9 +351,11 @@
                 <div data-aos="flip-up" data-aos-delay="200"
                     class="group relative transform -rotate-3 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer md:mt-12">
                     <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1621112904887-419379ce6824?q=80&w=2072&auto=format&fit=crop"
-                            alt="Us"
-                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="antd-img-container"
+                            data-src="https://ik.imagekit.io/c2zxrxqp6/Gokul/WhatsApp%20Image%202026-02-11%20at%2011.11.22%20(1).jpeg?updatedAt=1770819533207"
+                            data-alt="Us"
+                            data-class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        </div>
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -330,9 +372,9 @@
                 <div data-aos="flip-right" data-aos-delay="400"
                     class="group relative transform rotate-1 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer">
                     <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?q=80&w=1974&auto=format&fit=crop"
-                            alt="Us"
-                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="antd-img-container" data-src="ezgif-6066dc9295798726.gif" data-alt="Us"
+                            data-class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        </div>
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -349,9 +391,11 @@
                 <div data-aos="flip-left" data-aos-delay="100"
                     class="group relative transform -rotate-2 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer md:col-span-1 md:col-start-1 md:mt-8">
                     <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1522263842439-347f0d7b9d52?q=80&w=1974&auto=format&fit=crop"
-                            alt="Us"
-                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="antd-img-container"
+                            data-src="https://ik.imagekit.io/c2zxrxqp6/Gokul/image.png?updatedAt=1770819217155"
+                            data-alt="Us"
+                            data-class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        </div>
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -368,9 +412,9 @@
                 <div data-aos="flip-up" data-aos-delay="300"
                     class="group relative transform rotate-3 hover:rotate-0 transition-all duration-500 duration-300 cursor-pointer md:col-span-1 md:col-start-3 md:mt-8 hidden md:block">
                     <div class="bg-white p-4 pb-12 shadow-lg rounded-sm border border-gray-100 relative">
-                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1974&auto=format&fit=crop"
-                            alt="Us"
-                            class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        <div class="antd-img-container" data-src="ezgif-6455b626a588475b.gif" data-alt="Us"
+                            data-class="w-full h-64 object-cover filter sepia-[.2] group-hover:sepia-0 transition-all">
+                        </div>
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">

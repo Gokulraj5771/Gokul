@@ -108,4 +108,23 @@ document.addEventListener('DOMContentLoaded', () => {
         
         typeObserver.observe(elem);
     });
+    // Initialize Ant Design Images
+    const { Image } = antd;
+    const imgContainers = document.querySelectorAll('.antd-img-container');
+    
+    imgContainers.forEach(container => {
+        const src = container.getAttribute('data-src');
+        const alt = container.getAttribute('data-alt');
+        const className = container.getAttribute('data-class');
+        
+        const root = ReactDOM.createRoot(container);
+        root.render(
+            React.createElement(Image, {
+                src: src,
+                alt: alt,
+                className: className,
+                preview: true
+            })
+        );
+    });
 });
