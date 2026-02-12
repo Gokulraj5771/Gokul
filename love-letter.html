@@ -210,6 +210,57 @@
             scroll-snap-type: y mandatory;
             scroll-behavior: smooth;
         }
+
+        /* Equalizer Bars Animation */
+        .equalizer {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 20px;
+        }
+
+        .equalizer span {
+            width: 3px;
+            background-color: currentColor;
+            height: 5px;
+            transition: height 0.3s ease;
+        }
+
+        .playing .equalizer span {
+            animation: equalize 0.8s infinite ease-in-out;
+        }
+
+        .playing .equalizer span:nth-child(1) {
+            animation-delay: 0.1s;
+            animation-duration: 0.6s;
+        }
+
+        .playing .equalizer span:nth-child(2) {
+            animation-delay: 0.2s;
+            animation-duration: 0.8s;
+        }
+
+        .playing .equalizer span:nth-child(3) {
+            animation-delay: 0.3s;
+            animation-duration: 0.7s;
+        }
+
+        .playing .equalizer span:nth-child(4) {
+            animation-delay: 0.4s;
+            animation-duration: 0.9s;
+        }
+
+        @keyframes equalize {
+
+            0%,
+            100% {
+                height: 5px;
+            }
+
+            50% {
+                height: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -227,6 +278,22 @@
 
     <!-- Fireflies Container -->
     <div id="fireflies-container"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop autoplay>
+        <source src="new.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="music-control"
+        class="fixed top-6 right-6 z-[100] p-4 bg-black/40 backdrop-blur-md rounded-full shadow-2xl border border-rose/30 text-rose hover:scale-110 hover:border-rose/60 transition-all duration-300 flex items-center justify-center w-12 h-12">
+        <div class="equalizer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
 
     <!-- Background Audio (Optional) -->
     <!-- <audio id="bg-music" loop>
@@ -365,7 +432,7 @@
 
         <div id="final-message"
             class="fixed inset-0 bg-black flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-2000 z-[100]">
-            <p class="font-cursive text-4xl text-rose">Thank you for existing.</p>
+            <p class="font-cursive text-4xl text-rose">Life feels right with you in it.</p>
         </div>
     </section>
 

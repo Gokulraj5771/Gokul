@@ -108,6 +108,45 @@ document.addEventListener('DOMContentLoaded', () => {
         
         typeObserver.observe(elem);
     });
+    // Background Music Logic
+    const bgMusic = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-control');
+
+    let isPlaying = false;
+
+    function toggleMusic() {
+        if (isPlaying) {
+            bgMusic.pause();
+            musicBtn.classList.remove('playing');
+        } else {
+            bgMusic.play().catch(e => console.log("Audio play blocked by browser."));
+            musicBtn.classList.add('playing');
+        }
+        isPlaying = !isPlaying;
+    }
+
+    musicBtn.addEventListener('click', toggleMusic);
+
+    // Attempt playback on load
+    bgMusic.play().then(() => {
+        isPlaying = true;
+        musicBtn.classList.add('playing');
+    }).catch(e => {
+        console.log("Autoplay blocked. Waiting for interaction.");
+    });
+
+    // Interaction fallback
+    const startAudio = () => {
+        if (!isPlaying) {
+            toggleMusic();
+        }
+        document.removeEventListener('click', startAudio);
+        document.removeEventListener('touchstart', startAudio);
+    };
+
+    document.addEventListener('click', startAudio);
+    document.addEventListener('touchstart', startAudio);
+
     // Initialize Ant Design Images
     const { Image } = antd;
     const imgContainers = document.querySelectorAll('.antd-img-container');

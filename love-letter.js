@@ -254,4 +254,46 @@ document.addEventListener('DOMContentLoaded', () => {
             fireflyContainer.appendChild(firefly);
         }
     }
+    // Background Music Logic
+    const bgMusic = document.getElementById('bg-music');
+    const musicBtn = document.getElementById('music-control');
+
+    let isPlaying = false;
+
+    function toggleMusic() {
+        if (isPlaying) {
+            bgMusic.pause();
+            if (musicBtn) musicBtn.classList.remove('playing');
+        } else {
+            bgMusic.play().catch(e => console.log("Audio play blocked by browser."));
+            if (musicBtn) musicBtn.classList.add('playing');
+        }
+        isPlaying = !isPlaying;
+    }
+
+    if (musicBtn) {
+        musicBtn.addEventListener('click', toggleMusic);
+    }
+
+    // Attempt playback on load
+    if (bgMusic) {
+        bgMusic.play().then(() => {
+            isPlaying = true;
+            if (musicBtn) musicBtn.classList.add('playing');
+        }).catch(e => {
+            console.log("Autoplay blocked. Waiting for interaction.");
+        });
+    }
+
+    // Interaction fallback
+    const startAudio = () => {
+        if (!isPlaying) {
+            toggleMusic();
+        }
+        document.removeEventListener('click', startAudio);
+        document.removeEventListener('touchstart', startAudio);
+    };
+
+    document.addEventListener('click', startAudio);
+    document.addEventListener('touchstart', startAudio);
 });

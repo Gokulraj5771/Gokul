@@ -94,6 +94,57 @@
                 opacity: 0;
             }
         }
+
+        /* Equalizer Bars Animation */
+        .equalizer {
+            display: flex;
+            align-items: flex-end;
+            gap: 2px;
+            height: 20px;
+        }
+
+        .equalizer span {
+            width: 3px;
+            background-color: currentColor;
+            height: 5px;
+            transition: height 0.3s ease;
+        }
+
+        .playing .equalizer span {
+            animation: equalize 0.8s infinite ease-in-out;
+        }
+
+        .playing .equalizer span:nth-child(1) {
+            animation-delay: 0.1s;
+            animation-duration: 0.6s;
+        }
+
+        .playing .equalizer span:nth-child(2) {
+            animation-delay: 0.2s;
+            animation-duration: 0.8s;
+        }
+
+        .playing .equalizer span:nth-child(3) {
+            animation-delay: 0.3s;
+            animation-duration: 0.7s;
+        }
+
+        .playing .equalizer span:nth-child(4) {
+            animation-delay: 0.4s;
+            animation-duration: 0.9s;
+        }
+
+        @keyframes equalize {
+
+            0%,
+            100% {
+                height: 5px;
+            }
+
+            50% {
+                height: 20px;
+            }
+        }
     </style>
     <script>
         tailwind.config = {
@@ -119,6 +170,22 @@
 
     <!-- Floating Background Hearts -->
     <div class="heart-bg" id="heart-bg"></div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop autoplay>
+        <source src="jvke_golden_hour.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="music-control"
+        class="fixed top-6 right-6 z-50 p-4 bg-white/80 backdrop-blur-sm rounded-full shadow-lg border border-pink-200 text-pink-500 hover:scale-110 transition-all duration-300 flex items-center justify-center w-12 h-12">
+        <div class="equalizer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
 
     <!-- 1️⃣ HERO SECTION -->
     <section class="min-h-[100dvh] flex flex-col items-center justify-center text-center px-4 relative">
@@ -168,12 +235,10 @@
                             data-alt="Meeting"
                             data-class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-500">
                         </div>
-                        <span
-                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Dec
-                            15, 2023</span>
-                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">The day I saw you</h3>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">✨ The Moment My World Chose
+                            You</h3>
                         <p class="text-gray-600">I didn’t even know what love really was.
-                            But somehow, I had already fallen for you—
+                            But somehow, I had already fallen for you
                             for the way you were shouting at your mom, saying you were late for school,
                             with one side of your hair done and the other still messy.
                             In that simple, imperfect moment…
@@ -200,13 +265,11 @@
                             data-src="https://ik.imagekit.io/c2zxrxqp6/Gokul/card2.jpeg" data-alt="First Date"
                             data-class="w-full h-48 object-contain rounded-xl hover:scale-105 transition-transform duration-500">
                         </div>
-                        <span
-                            class="inline-block px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm font-semibold mb-2">Jan
-                            10, 2024</span>
-                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Our First Date</h3>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">💓 The Tiny Heart That
+                            Started Everything</h3>
                         <p class="text-gray-600">The first words I ever spoke to you directly without fear
                             were me showing my hand, forming a tiny heart,
-                            and asking you what it meant—
+                            and asking you what it meant
                             because you loved K-dramas.
                             You smiled and said, " salanghaeyo ,” I think…
                             saying it so freely, without any fear.</p>
@@ -231,13 +294,14 @@
                             data-class="w-full h-48 object-contain rounded-xl hover:scale-105 transition-transform duration-500">
                         </div>
                         <span
-                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Mar
-                            20, 2024</span>
-                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Our First Adventure</h3>
+                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">May
+                            30, 2020</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">✨ The Wish That Made My
+                            World Brighter</h3>
                         <p class="text-gray-600">The first time you wished me
                             was on my birthday in 2020, through Shella.
                             That single wish turned into one of the best birthdays of my life.
-                            I remember how happy I was that day—
+                            I remember how happy I was that day
                             a happiness I can still feel when I think about it.
                             Even when Shella teased you and made fun of you,
                             you still took that step and wished me.
@@ -267,11 +331,13 @@
                             data-class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-500">
                         </div>
                         <span
-                            class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm font-semibold mb-2">Dec
-                            15, 2024</span>
-                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">One Year Together</h3>
-                        <p class="text-gray-600">was just a chocolate, but it meant everything to me.
-                            As you already know, I still have the wrapper from that chocolate—
+                            class="inline-block px-3 py-1 bg-yellow-100 text-yellow-600 rounded-full text-sm font-semibold mb-2">Oct
+                            25, 2024</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Wrapped in Chocolate, Tied
+                            with Love</h3>
+                        <p class="text-gray-600">The first gift we ever exchanged
+                            was just a chocolate, but it meant everything to me.
+                            As you already know, I still have the wrapper from that chocolate
                             I kept it like a little piece of us.
                             And the bracelet I gave you…
                             every time I see it hanging on your wrist,
@@ -297,19 +363,21 @@
                             data-class="w-full h-48 object-cover rounded-xl hover:scale-105 transition-transform duration-500">
                         </div>
                         <span
-                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Today</span>
-                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Right Now</h3>
+                            class="inline-block px-3 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-semibold mb-2">Oct
+                            2, 2023</span>
+                        <h3 class="text-2xl font-serif-heading font-bold text-gray-800 mb-2">Moments I Could Never Let
+                            Go</h3>
                         <p class="text-gray-600">The first photo and video you ever sent me
                             That picture was taken by your sister, just casually for Snapchat.
                             For them, it was only a photo…
                             but for me, it was everything.
                             I watched it all night without sleeping,
                             as if the whole world had paused inside that moment.
-                            You asked me to delete those pictures—
+                            You asked me to delete those pictures
                             I said I did… but I’m sorry for that little lie,
                             because I just couldn’t let them go.
                             And then, after almost two years,
-                            you sent me a video—
+                            you sent me a video
                             a flying kiss meant just for me.
                             In that single second,
                             you pulled me straight into heaven.</p>
@@ -338,7 +406,7 @@
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                Just being silly 🤪</p>
+                                Effortless Queen</p>
                         </div>
                     </div>
                     <!-- Tape Effect -->
@@ -359,7 +427,7 @@
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                My favorite view ❤️</p>
+                                Breath Taken</p>
                         </div>
                     </div>
                     <!-- Tape Effect -->
@@ -378,7 +446,8 @@
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                Best day ever ✨</p>
+                                Little Sunshine
+                            </p>
                         </div>
                     </div>
                     <!-- Tape Effect -->
@@ -399,7 +468,7 @@
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                Adventures await 🌍</p>
+                                Blushing Beauty</p>
                         </div>
                     </div>
                     <!-- Tape Effect -->
@@ -418,7 +487,7 @@
                         <div class="absolute bottom-4 left-0 w-full text-center">
                             <p
                                 class="font-handwritten text-2xl text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                Forever & always 💍</p>
+                                Dangerously Beautiful</p>
                         </div>
                     </div>
                     <!-- Tape Effect -->
